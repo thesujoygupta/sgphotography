@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="with=device-width, initial-scale=1.0">
+  <title>SG PHOTOGRAPHY - GALLERY</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section class="sub-header">
+    <nav>
+      <a href="index.html"><img src="images/logo.jpg"></a>
+      <div class="nav-links" id="navLinks">
+      <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+          <li><a href="packages.html">PACKAGES</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+
+    </nav>
+    <h1>Gallery of Various Photographs</h1>
+    </section>
+
+<!---gallery content--->
+
+<section class="gallery">
+<div class="full-img" id="fullImgBox">
+ 	<img src= "images/img1.jpg" id="fullImg">
+ 	<span onclick="closeFullImg()">X</span>
+</div>
+
+<div class="img-gallery">
+  <img src="images/img1.jpg" onclick="openFullImg(this.src)">
+  <img src="images/img2.jpg" onclick="openFullImg(this.src)">
+  <img src="images/img3.jpg" onclick="openFullImg(this.src)">
+  <img src="images/img4.jpg" onclick="openFullImg(this.src)">
+  <img src="images/img5.jpg" onclick="openFullImg(this.src)">
+  <img src="images/img6.jpg" onclick="openFullImg(this.src)">
+  <img src="images/img7.jpg" onclick="openFullImg(this.src)">
+  <img src="images/img8.jpg" onclick="openFullImg(this.src)">
+</div>
+
+<script>
+
+
+var fullImgBox = document.getElementById("fullImgBox");
+var fullImg = document.getElementById("fullImg");
+
+function openFullImg(pic){
+	fullImgBox.style.display = "flex";
+	fullImg.src = pic;
+}
+
+function closeFullImg(){
+	fullImgBox.style.display = "none";
+}
+
+</script>
+
+
+</section>
+
+
+<!--- footer---->
+<section class="footer">
+  <h4>SG Photography</h4>
+  <p>Nothing Short of Picture Perfect <i class="fa fa-trademark"></i><br><i class="fa fa-home"></i> &nbsp 124 Flatbush Ave, Brooklyn, NY 11207<br><i class="fa fa-phone"></i> &nbsp +1(844) 355-0121<br><i class="fa fa-envelope-o"></i> &nbsp info@sgphotography.com</p>
+  <div class="icons">
+    <i class="fa fa-facebook"></i>
+    <i class="fa fa-twitter"></i>
+    <i class="fa fa-instagram"></i>
+    <i class="fa fa-linkedin"></i>
+  </div>
+  <p><i class="fa fa-copyright"></i> Sujoy Gupta 2022. All rights reserved.</p>
+</section>
+
+<!---JavaScript for Toggle Menu------>
+    <script>
+
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+    	navLinks.style.right = "0";
+    }
+    function hideMenu(){
+    	navLinks.style.right = "-200px";
+    }
+
+    </script>
+
+
+</body>
+</html>
